@@ -1,0 +1,58 @@
+h1 {
+    text-align: center;
+    font-size: 300%;
+    margin-top:180px;
+    margin-bottom:50px;
+}
+.left {
+    text-align: left;
+    word-spacing: 20px;
+}
+.right {
+    float: right;
+    word-spacing: 20px;
+}
+.center {
+    text-align: center;
+}
+.signin {
+    word-spacing: 3px;
+}
+.red {
+    color:red;
+}
+.blue {
+    color:blue;
+}
+.green {
+    color:green;
+}
+.yellow {
+    color:yellow;
+}
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+}
+th {
+    height: 50px;
+}
+.input {
+    outline:none;
+    width: 80%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-color:black;
+    border-radius: 30px;
+}
+.input[type=text]:focus {
+    border: 3px solid #555;
+}
+.button {
+    border-radius:10px;
+    outline:none;
+}
