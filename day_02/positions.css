@@ -1,0 +1,54 @@
+.static-position {
+    text-align: center;
+    border: 1px solid gold;
+    position: static;
+}
+
+.relative-position {
+    border: 1px solid lightcoral;
+    position: relative;
+    top: 100px;
+    right: -50px;
+    width: 20%;
+    text-align: center;
+}
+
+.fixed-position {
+    border: 1px solid lightblue;
+    position: fixed;
+    bottom: 10px;
+    left: 32px;
+    width:35%;
+    text-align: center;
+}
+
+.absolute-parent {
+    text-align: left;
+    background-color: aqua;
+    border: 1px solid brown;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    top: 300px;
+}
+
+.absolute-position {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    border: 1px solid green;
+    background-color: azure;
+    text-align: center;
+    padding: 10px
+}
+
+.sticky-position {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: bisque;
+    border: 1px solid silver;
+    width:auto;
+}

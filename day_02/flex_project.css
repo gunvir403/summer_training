@@ -1,0 +1,43 @@
+body {
+    background-color: black;
+}
+
+.master_flex {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.slave_flex {
+    display: flex;
+    flex-flow: row wrap;
+    width: 500px;
+    height: 500px;
+    justify-content: space-between;
+    align-content: flex-start;
+    
+}
+
+.rectangle {
+    border: 1px solid yellow;
+    height: 100px;
+    width: 200px;
+}
+
+.square {
+    border: 1px solid yellow;
+    height: 100px;
+    width: 100px;
+}
+
+.empty {
+    width: 500px;
+    height: 94px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
