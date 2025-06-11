@@ -1,0 +1,142 @@
+#main-content {
+    display: flex;
+    flex-flow: column;
+    padding: 10px 10px;
+    position: fixed;
+    top: 100px;
+    left: 200px;
+    height: 600px;
+    width: 1110px;
+    overflow-y: auto;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+#work {
+    padding: 8px 8px;
+    display: flex;
+    height: 300px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    margin-bottom: 320px;
+}
+
+.break {
+    flex: 0 0 100%;
+    height: 0;
+}
+.project {
+    height: 300px;
+    width: 508px;
+    position: relative;
+}
+
+.overlay{
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    bottom: 0px;
+    height: 150px;
+    width: 500px;
+    padding-left: 8px;
+}
+
+.overlay:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.overlay a:link {
+  text-decoration: none;
+  color :black;
+}
+
+.overlay a:visited {
+  text-decoration: none;
+}
+
+.overlay a:hover {
+  text-decoration: none;
+  color: grey;
+}
+
+#jump-to a:active {
+  text-decoration: none;
+  color: grey;
+}
+
+#contact {
+    text-align: center;
+}
+
+.image {
+    height: 300px;
+    width: 500px;
+    background-size: cover;
+    position: absolute;
+}
+
+#sidebar {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    left: 10px;
+    border: 1px solid grey;
+    padding: 10px 10px;
+    height: 600px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+#sidebar img {
+    border-radius: 50%;
+}
+
+#sidebar img:hover{
+    opacity: 0.5;
+}
+
+#jump-to {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-around;
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px 10px;
+    height: 600px;
+    width: 150px;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #222;
+    color: #d6d6d6
+}
+
+#jump-to a:link {
+  text-decoration: none;
+  color :white;
+}
+
+#jump-to a:visited {
+  text-decoration: none;
+}
+
+#jump-to a:hover {
+  text-decoration: none;
+  color:#d6d6d6;
+}
+
+#jump-to a:active {
+  text-decoration: none;
+  color:#d6d6d6;
+}
