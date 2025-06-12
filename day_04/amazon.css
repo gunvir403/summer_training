@@ -1,0 +1,261 @@
+#master-flex {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#top-bar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content:flex-start;
+    position: sticky;
+    top: 0;
+    background-color: rgb(15, 20, 26);
+    height: 60px;
+    width: 101.03%;
+    margin: -8px -8px;
+}
+
+.logo {
+    color: white;
+    font-size: 300%;
+    margin: 4px 0 0 8px;
+}
+
+.logo-text {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    font-size: 200%;
+    margin: 8px 0 0 8px;
+}
+
+.location-logo {
+    color: white;
+    font-size: 100%;
+    margin: 20px 0 0 16px;
+}
+
+.location-text {
+    color: white;
+    font-size: 80%;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 14px 0 0 4px;
+}
+
+.search-bar input[type=text] {
+    padding: 10px 10px;
+    width: 700px;
+    margin: 10px -4px 0 16px;
+    border-radius: 8px 0 0 8px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    outline: none;
+}
+
+.search-bar input[type=text]:focus {
+    border: 5px solid orange;
+    outline: none;
+
+}
+
+.search-bar button {
+    font-size: 100%;
+    padding: 7px 8px 11px 8px;
+    background-color: #FEBD69;
+    border-radius: 0 8px 8px 0;
+    outline: none;
+}
+
+.right-text {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    margin: 14px 0 0 24px;
+    font-size: 80%;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 150%;
+    margin: 20px 0 8px 110px;
+}
+
+.cart-text {
+    color: white;
+    font-size: 120%;
+    margin: 20px 0 8px 4px;
+}
+
+#top-menu {
+    display: flex;
+    flex-flow: row wrap;
+    height: 45px;
+    width: 100%;    
+    background-color: #232F3E;
+    width: 101.03%;
+    margin: 0 -8px 0 -8px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top-menu-items {
+     color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 100%;
+    margin: 4px 8px 0 8px; 
+}
+
+#main_image {
+    background-size: cover;
+    position: fixed;
+    top: 95px;
+    z-index: -2;
+}
+
+#blank-space {
+    height: 250px;
+    width: 100%;
+}
+
+#product-row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: auto;
+    width:  auto;
+}
+
+.product {
+    background-color: white;
+    color: black;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    height: 400px;
+    width: 350px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    align-content: space-evenly;
+}
+
+.embed-image {
+    object-fit: cover;
+}
+
+.product p{
+    font-size: 10px;
+}
+
+.empty-block {
+    height: 10px;
+    width:  60px;
+}
+
+#gradient-space {
+    position: fixed;
+    top: 600px;
+    z-index: -1;
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(#FBF1E7,#E3E6E6);
+}
+
+#bottom-contents {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    align-items: center;
+    background-color: #232F3E;
+    height: 400px;
+    margin: -8px -8px;
+}
+
+.bottom-elements {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-content: space-between;
+    align-items:flex-start;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    font-size: 80%;
+    height: 300px;
+}
+
+.bottom-elements p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+ @media  (max-width: 600px) {
+    #master-flex {
+        flex-flow: column nowrap;
+    }
+    #top-bar {
+        flex-flow: row wrap;
+        height: auto;
+        font-size: 80%
+    }
+    #top-menu {
+         height: auto;
+         margin: 8px 0 0 -8px;
+
+    }
+    #product-row {
+        flex-flow: column nowrap;
+    }
+    .search-bar input[type=text] {
+        width: 70%;
+        padding: 10px 0 10px 0;
+        font-size: 90%;
+        margin: 5px -2px 2px 2px;
+        position: absolute;
+        right: 52px;
+    }
+    .search-bar button {
+        position: absolute;
+        right: 20px;
+        margin: 5.5px 0 0 0;
+    }
+    .cart-icon {
+        display: none;
+    }
+    .cart-text{
+        display:none;
+    }
+    .logo-text {
+        display: none;
+    }
+    .location-logo {
+        display: none;
+    }
+    .location-text {
+        display: none;
+    }
+    .right-text {
+        display: none;
+    }
+    #main_image {
+        display: none;
+    }
+    #blank-space {
+        display: none;
+    }
+    body {
+    background: linear-gradient(#FBF1E7,#E3E6E6);
+    }
+ }
