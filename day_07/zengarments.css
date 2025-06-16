@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Effra Heavy';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Effra Heavy'), url('fonts/Effra\ Heavy.woff') format('woff');
+    }
+
+@font-face {
+    font-family: 'Effra Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Effra Light'), url('fonts/Effra\ Light.woff');
+    }
+
+@font-face {
+    font-family: 'Effra Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Effra Medium'), url('fonts/Effra\ Medium.woff');
+    }
+
+@font-face {
+    font-family: 'Effra Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Effra Medium Italic'), url('fonts/Effra\ Medium\ Italic.woff');
+    }
+    
+
+body {
+    background-color: #E8ECF0;
+}
+#bg-image {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    z-index: -1;
+}
+
+#main-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    top: 50px;
+    justify-content: space-evenly;
+}
+
+#side-bar {
+    display: flex;
+    flex-flow : column nowrap;
+    margin: 20% 5% 0 3%;
+    width: 120%;
+    height: 100%;
+}
+
+#side-bar h3 {
+    font-family: 'Effra Medium';
+    color: #182E4F;
+    letter-spacing: 1px;
+}
+
+#side-bar img {
+    margin: 0 0 16px 0;
+}
+
+.links {
+    font-family: 'Effra Light';
+    font-size: 16px;
+    color: #95A0B0;
+    margin: 0 0 16px 0;
+}
+
+.links a {
+    font-family: 'Effra Medium';
+    font-size: 15px;
+    color: #A58758;
+    text-decoration: none;
+    transition: color 0.5s linear;
+    letter-spacing: 3px;
+
+}
+
+.links a:hover {
+    font-family: 'Effra Medium Italic';
+    color: #333333;
+}
+
+.links a ~ a {
+    color: #7989A3;
+    font-family: 'Effra Light';
+    font-size: 16px;
+    letter-spacing: 1px; 
+}
+
+.links a ~ a:hover {
+    text-decoration: underline;
+    text-decoration-color: #A58758;
+    font-family: 'Effra Light';
+}
+
+#icons {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 30px;
+    justify-content: space-around;
+    position: relative;
+    right: -50px;
+    margin: 10px 10px 100px 10px;
+}
+
+
+
+#main-content {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: right;
+    padding: 10% 30% 10% 5%;
+    border: 1 px solid black;
+ }
+
+ #main-heading h6 {
+    color: #95A0B0;
+    font-size: 16px;
+    font-family: 'Effra Light';
+    margin-bottom: -30px;
+    letter-spacing: 5px;
+ }
+
+ #main-heading h5 {
+    font-family: 'Effra Light';
+    float: right;
+    position: absolute;
+    right: 20%;
+    top: 6%;
+    text-align: left;
+    color: #899DBB;
+    font-size: 20px;
+ }
+
+ #main-heading h1 {
+    font-family: 'Effra Heavy';
+    color: #182E4F;
+    font-size: 50px;
+    margin-bottom: 100px;
+ }
+
+ #main-heading p {
+    font-family: 'Effra Light';
+    color: #333333;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin:0 0 40px 0;
+    position: relative;
+    right: 0;
+ }
+
+.article p {
+    font-family: 'Effra Light';
+    font-size: 20px;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    font-weight: 300;
+    margin: 0 0 50px 0;
+
+}
+
+.article h6 {
+    font-family: 'Effra Medium';
+    color: #182E4F;
+    float: right;
+    text-align: left;
+    font-size: 15px;
+    position: absolute;
+    right: 18%;
+    width: 10%;
+    margin: 0 0 20px 0;
+}
+
+@media (max-width: 600px)  {
+    #main-flex {
+        flex-flow: column nowrap;
+        height: 100%;
+        width: 100%;
+    }
+
+    #main-heading h1 {
+        font-size: 35px;
+    }
+
+    #main-heading h5 {
+        display: none;
+    }
+    
+    #main-content {
+        order: 1;
+        height: 100%;
+        width: 80%;
+        text-align: left;
+
+    }
+
+    .article h6 {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 22px;
+    }
+    
+    #side-bar {
+        order: 2;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        height: 100%;
+        width: 100%;
+        padding: 0 50px 0 20px;
+    }
+
+    #side-bar img {
+        display: none;
+    }
+
+    #side-bar h3  {
+        flex: 0 0 100%;
+    }
+
+    .links {
+        flex: 0 0 50%;
+    }
+
+    .links a {
+
+        font-size: 14px;
+    }
+
+    #icons {
+        order: 3;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        margin: 10px 100px 0 0;
+    }
+
+    #icons i {
+        flex: 0 0 25%;
+    }
+}
