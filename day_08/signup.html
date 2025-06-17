@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <title>MyWebPage | Sign Up</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <h6>My Web Page | Sign Up</h6>
+        </div>
+        <div id="content">
+                <form id="signupInfo">
+                    <h4>Enter Your Details</h4>
+                    <input type="text" id="email" name="email" placeholder="Enter your e-mail address">
+                    <label for="email" id="error1"></label>                 
+                    <input type="text" id="uname" name="uname" placeholder="Enter your username">
+                    <label for="uname" id="error2"></label>  
+                    <input type="password" id="pass" name="pass" placeholder="Enter your password">
+                    <label for="pass" id="error3"></label>  
+                    <input type="password" id="pass2" name="pass2" placeholder="Confirm your password">
+                    <label for="email" id="error4"></label>  
+                    <button id="submit" onclick="verifyDetails()">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script src="signup.js"></script>
+    </body>
+ </html>
