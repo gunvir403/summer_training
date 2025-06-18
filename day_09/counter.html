@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <title>Shop</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="card">
+            <div id="number">0</div>
+            <div id="count" class="button">Count</div>
+            <div id="uncount" class="button">UnCount</div>
+        </div>
+        <script>
+            let count = 0;
+            const counterDisplay = document.getElementById('number');
+            const incrementButton = document.getElementById('count');
+            const decrementButton = document.getElementById('uncount');
+            function incrementCounter() {
+                count++;
+                counterDisplay.innerHTML = count;
+            }
+            function decrementCounter() {
+                count--;
+                counterDisplay.innerHTML = count;
+            }
+            incrementButton.addEventListener('click', incrementCounter);
+            decrementButton.addEventListener('click', decrementCounter);
+        </script>
+    </body>
+</html>

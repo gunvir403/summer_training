@@ -1,0 +1,52 @@
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+}
+
+#card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0 0 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 50vh;
+    width: 50ch;
+}
+
+#card:hover, #product:hover, #add:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+#product {
+    border-radius: 10px;
+    height: 60%;
+    width: 38%;
+    background: url("https://rukminim2.flixcart.com/image/832/832/xif0q/mobile/d/m/k/-original-imahch2h4yjyygy2.jpeg?q=70&crop=false");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#add, .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 10%;
+    width: 60%;
+}
+
+#number {
+    font-size: 50px;
+}

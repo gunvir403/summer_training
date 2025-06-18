@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shop</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="card">
+            <div id="product"></div>
+            <div id="details">Samsung Galaxy S25 256GB</div>
+            <div id="price">Price: $859.99</div>
+            <div id="add">Add to Cart</div>
+        </div>
+        <script>
+            document.querySelector("#card").addEventListener("click", function (event) {
+                location.href = "https://www.samsung.com/us/smartphones/galaxy-s25/buy/";
+            });
+            document.querySelector("#add").addEventListener("click", function (event) {
+                alert("Added to Cart");
+                event.stopPropagation();
+            });
+        </script>
+    </body>
+</html>
