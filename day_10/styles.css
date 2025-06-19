@@ -1,0 +1,85 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFFF70;
+}
+
+.comic-relief-regular {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.comic-relief-bold {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffff9b;
+    border: 1px solid black;
+    width: 80%;
+    top: 0;
+}
+
+#list-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    background-color: #FFFF9B;
+    border: 1px solid black;
+    margin: 32px;
+    padding: 32px;
+    font-size: 20px;
+    width: 60%;
+}
+
+.delete-btn, .edit-btn {
+    float: right;
+    font-size: 20px;
+    background-color: #FFFF9B;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn:hover, .edit-btn:hover {
+    color: grey;
+}
+
+#input-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: 120px;
+    width: 50%;
+    background-color: #FFFF9B;
+    padding: 16px;
+    border: 1px solid black;
+}
+
+#inputBox {
+    background-color: #FFFF9B;
+    border: 1px solid black;
+    padding: 8px;
+    outline: none;
+}
+
+#inputBox:hover {
+    background-color: #FFFFB5;
+}
+
+#btn {
+    background-color: #ffff9b;
+    border: 1px solid black;
+}
+#btn:hover {
+    cursor: pointer;
+    background-color: #FFFFB5;
+}
