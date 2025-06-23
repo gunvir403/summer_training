@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>E-Mail Checker</title>
-        <link rel="stylesheet" href="email-check.css">
-        <script src="email-check.js"></script>
-    </head>
-    <body>
-        <div id="checker-form">
-            <h2>Email Checker</h2>
-            <form id="check-email">
-                <input type="text" id="email" name="email" placeholder="Enter Your Email">
-                <span id="error"></span>
-                <button type="submit">Check</button>
-            </form>
-        </div>
-    </body>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validator</title>
+    <link rel="stylesheet" href="email-check.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Email Validator</h1>
+        <form id="email-form">
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" placeholder="e.g. test@example.com" required>
+            <button type="submit">Validate</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="email-check.js"></script>
+</body>
 </html>
