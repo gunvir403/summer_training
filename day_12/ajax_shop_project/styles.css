@@ -14,8 +14,14 @@ h1 {
     margin: auto;
 }
 
+#loading {
+    color: white;
+    text-align: center;
+    margin: 10px auto auto auto;
+}
+
 #products {
-    display: flex;
+    display: none;
     flex-flow: row nowrap;
     overflow-x: auto;
     justify-content: space-evenly;

@@ -6,12 +6,16 @@ async function recieveData() {
             throw new Error(`Response Status: ${response.status}`);
         }
         const json = await response.json();
+
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("products").style.display = "flex";
+
         renderShop(json);
         }
     catch (error) {
         console.error(error.message);
     }
-
+    
     function renderShop(json) {
         for (let i = 0; i<=json.products.length; i++) {
             const container = document.getElementById("products");
