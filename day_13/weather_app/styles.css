@@ -76,17 +76,102 @@ body {
     font-size: 14px;
 }
 
-#loading {
+#weatherInfo {
     display: none;
-    color: #B8B8B8;
-    text-align: center;
+    flex-flow: row wrap;
+    color: white;
+    gap: 20px;
 }
 
-#weatherInfo, #forecastInfo {
+#weatherInfo i {
+    display: inline;
+    margin-right: 20px;
+    color: #FFDB70;
+}
+#weatherInfo h2 {
+    flex: 0 0 100%;
+    margin: auto;
+}
+
+#weatherInfo img {
+    margin: auto;
+}
+
+#weatherInfo h1 {
+    display: block;
+    flex: 0 0 40%;
+    margin: auto;
+    font-size: 50px;
+}
+#weatherInfo h1 p {
+    font-size: 14px;
+    font-weight: 500;
+    margin: auto auto auto 10px;
+}
+
+#weatherInfo .details {
+    text-align: center;
+    background-color: #282829;
+    font-weight: 600;
+    width: 200px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#weatherInfo .details p {
+    margin-top: 20px;
+}
+
+#forecastInfo {
     display: none;
+    flex-flow: row nowrap;
+    gap: 10px;
     color: white;
+}
+
+#forecastInfo .details {
+    text-align: center;
+    background-color: #282829;
+    font-weight: 300;
+    margin: auto;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
 }
 
 #errorMessage {
     color: red;
+}
+
+#recents {
+    display: none;
+    flex-flow: row wrap;
+    color: #B8B8B8;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+#recents h5 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: auto;
+    flex: 0 0 100%;
+}
+#recents h5 i {
+    margin-right: 10px;
+}
+
+#recents p {
+    display: block;
+    background-color: #282829;
+    cursor: default;
+    height: 30px;
+    width: 100px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#recents p:hover {
+    background-color: #313131;
 }
