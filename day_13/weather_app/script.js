@@ -1,4 +1,4 @@
-const apiKey = "4d2c969116f5942d5d0a3c4ede64ee6b";
+const apiKey = "API_KEY";
 const searchBtn = document.getElementById("searchButton");
 const cityInput = document.getElementById("inputBar");
 const weatherInfo = document.getElementById("weatherInfo");
@@ -37,20 +37,22 @@ async function getWeather() {
   }
 }
 function displayWeather(data) {
-  const temp = data.main.temp;
-  const humidity = data.main.humidity;
-  const windSpeed = data.wind.speed;
-  weatherInfo.innerHTML =`  <div class="details">
-                            <p>Temperature: ${temp}°C</p>
+    weatherInfo.style.display = "block";
+    const temp = data.main.temp;
+    const humidity = data.main.humidity;
+    const windSpeed = data.wind.speed;
+    weatherInfo.innerHTML =`<div class="details">
+                                <p>Temperature: ${temp}°C</p>
                                 <p>Humidity: ${humidity}%</p>
                                 <p>Wind Speed: ${windSpeed} m/s</p>
                             </div>`;
 }
 function displayForecast(forecastData) {
+    forecastInfo.style.display = "block";
     for(let i = 0; i < 5; i++) {
         const temp2 = forecastData.list[i].main.temp;
         const forecast = document.createElement('p');
-        forecast.textContent = temp2;
+        forecast.textContent = `Day ${i+1} :` + temp2;
         forecastInfo.appendChild(forecast);
         
     }
