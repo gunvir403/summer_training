@@ -1,0 +1,78 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    background-color: darkgrey;
+}
+
+#container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 35em;
+    width: 25em;
+    background-color: #000;
+    color: white;
+    margin: auto;
+    border-radius: 1em;
+    box-shadow: 0.6em 0.6em gray;
+}
+
+#container h3 {
+    text-align: center;
+}
+
+#display {
+    height: 10rem;
+    width: 22rem;
+    background-color: #262323;
+    border-radius: 1rem;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    outline: none;
+    border: none;
+}
+
+#buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    height: 25rem;
+    width: 80%;
+}
+
+.button-column {
+    flex: 0 0 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+.button-column button {
+    border: none;
+    font-size: 20px;
+    background-color: gray;
+    border-radius: 100%;
+    padding: 10px;
+    box-shadow: 4px 4px #262323;
+    transform: translateY(-6px) translateX(-6px);
+    transition: transform 200ms;
+}
+
+.button-column button:hover {
+    background-color: lightgray;
+}
+
+.button-column button:active {
+    box-shadow: none;
+    transform: translateY(-2px) translateX(-2px);
+    transition: transform 200ms;
+}
