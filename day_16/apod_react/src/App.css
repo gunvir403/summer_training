@@ -1,0 +1,46 @@
+body {
+  margin: auto;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#InfoBar {
+  display: flex;
+  flex-flow: row wrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 98%;
+  padding: 1%;
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#InfoBar h3 {
+  flex: 0 0 100%;
+  margin: auto;
+  font-weight: 300;
+}
+
+#InfoBar h2 {
+  margin: auto auto auto 0;
+  flex: 0 0 90%;
+}
+
+#InfoBar button {
+  flex: 0 0 10%;
+}
+
