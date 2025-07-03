@@ -61,6 +61,12 @@ nav a {
   color: inherit;
 }
 
+nav a.active, nav a.active:hover {
+  font-weight: 900;
+  cursor: default;
+  color: inherit;
+}
+
 section p, section h5, section ul, section h3, section h2, section h4 {
   text-align: left;
 }

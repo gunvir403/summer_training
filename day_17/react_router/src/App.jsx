@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router";
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
@@ -9,13 +9,13 @@ const App = () => (
     <nav>
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink to='/'>Home</NavLink>
         </li>
         <li>
-          <Link to='/about'>About</Link>
+          <NavLink to='/about'>About</NavLink>
         </li>
         <li>
-          <Link to='/contact'>Contact</Link>
+          <NavLink to='/contact'>Contact</NavLink>
         </li>
       </ul>
     </nav>
