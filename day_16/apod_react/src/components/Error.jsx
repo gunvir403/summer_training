@@ -1,5 +1,5 @@
 const Error = () => {
-    return <>Error</>
+    return <>Error Fetching Data</>
 }
 
 export default Error;
