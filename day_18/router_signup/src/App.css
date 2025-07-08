@@ -1,0 +1,88 @@
+.masterofpuppets {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    place-content: center;
+    place-items: center;
+    gap: 30px;
+}
+
+.authBox {
+    background-color: #292b2e;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    width: 30em;
+    border-radius: 8px;
+    box-shadow: 4px 4px black;
+}
+
+.authBox form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    padding: 8px;
+    margin: 8px;
+}
+
+
+.fields {
+    padding: 8px;
+}
+
+.fields input {
+    width: 90%;
+    padding: 8px;
+    margin: 8px;
+    border: none;
+    background-color: #45484d;
+    border-radius: 8px;
+}
+
+.fields label {
+    font-size: 20px;
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+.rules {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 12rem;
+    background-color: #292b2e;
+    border-radius: 8px;
+    box-shadow: 4px 4px black;
+    padding: 38px 0 38px 0;
+}
+.rules p {
+    margin: 1px;
+    text-align: center;
+}
+
+.homeflex {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.searchbox {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.searchbox label {
+    flex: 0 0 100%;
+}
+
+.searchbox input {
+    border: none;
+}
