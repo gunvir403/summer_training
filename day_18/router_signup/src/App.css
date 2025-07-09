@@ -77,12 +77,43 @@ input:focus {
 .searchbox {
     display: flex;
     flex-flow: row wrap;
+    gap: 10px;
 }
 
 .searchbox label {
     flex: 0 0 100%;
+    margin-bottom: 5px;;
 }
 
 .searchbox input {
     border: none;
+    width: 70%;
+    padding: 8px;
+    border-radius: 8px;
+    outline: 1px solid #292b2e;
+    background-color: #292b2e;
+    transition: outline-color 0.25s;
+}
+
+.searchbox input:hover, .searchbox input:focus {
+    outline-color: #646cff;
+}
+
+.result {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    margin-top: 16px;
+    width: 25em;
+}
+
+.resultbox {
+    text-align: center;
+    background-color: #292b2e;
+    border-radius: 8px;
+}
+
+.resultbox p {
+    margin: auto auto 8px auto;
 }
