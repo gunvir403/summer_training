@@ -1,13 +1,32 @@
 import { useState, useEffect } from "react";
+import { openDB } from 'idb';
 
-const Home = () => {
+const Home = ({ logout }) => {
 
     const [dummyUsers, setDummyUsers] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredFakeUsers, setFilteredFakeUsers] = useState([]);
     const [ok, setOk] = useState(false);
     const [error, setError] = useState("");
+    const [username, setUsername] = useState("");
 
+    const getUsernameFromDB = async () => {
+        const db = await openDB('userDB', 1);
+
+        const user = await db.get('currentUser', 1);
+
+        if (user) {
+            setUsername(user.username);
+        } else {
+            setUsername("Joker");
+        }
+    }
+
+    const clearUsernameFromDB = async () => {
+        const db = await openDB('userDB', 1);
+        await db.delete('currentUser', 1);
+    }
+    
     useEffect(() => {
         const storedFakeUsers = localStorage.getItem("fakeusers");
         if (storedFakeUsers) {
@@ -22,6 +41,7 @@ const Home = () => {
             })
             .catch((err) => setError("Error fetching data: ", err));
         }
+        getUsernameFromDB();
     }, []);
 
     const handleSearch = () => {
@@ -37,9 +57,18 @@ const Home = () => {
         }
     };
 
+    const handleLogout = () => {
+        clearUsernameFromDB();
+        logout();
+    }
+
     return (
         <div className="homeflex">
-            <h3>Welcome</h3>
+            <div className="topbar">
+                <h3>React Router Homepage</h3>
+                <p>Welcome, {username}</p>
+                <button onClick={handleLogout}>Log Out</button>
+            </div>
             <div className="searchbox">
                 <label>Search for users</label>
                 <input 

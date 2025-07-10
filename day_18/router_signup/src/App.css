@@ -68,10 +68,24 @@ input:focus {
 .homeflex {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100vw;
+}
+
+.topbar {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.topbar h3 {
+    flex: 0 0 80%; 
+    margin: auto;
+}
+
+.topbar button {
+    margin: auto;
 }
 
 .searchbox {
@@ -95,7 +109,7 @@ input:focus {
     transition: outline-color 0.25s;
 }
 
-.searchbox input:hover, .searchbox input:focus {
+.searchbox input:hover {
     outline-color: #646cff;
 }
 
@@ -112,6 +126,13 @@ input:focus {
     text-align: center;
     background-color: #292b2e;
     border-radius: 8px;
+    outline: 1px solid #292b2e;
+    transition: outline-color 0.25s;
+    margin: 4px 16px 4px 16px;
+}
+
+.resultbox:hover {
+    outline-color: #646cff;
 }
 
 .resultbox p {

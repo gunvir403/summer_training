@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate, Link } from "react-router";
 import bcrypt from "bcryptjs";
+import { openDB } from "idb";
 
 const SignUp = () => {
 
@@ -15,10 +16,33 @@ const SignUp = () => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const passwordRegex = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
 
-    const savedUsers = JSON.parse(localStorage.getItem('users')) || [];
-    const userExists = savedUsers.some(user => user.username === username);
+    const getAllUsers = async () => {
 
-    const validateForm = () => {
+        const db = await openDB('userDB', 1, {
+            upgrade(db) {
+                if (!db.objectStoreNames.contains('users')) {
+                    db.createObjectStore('users', { keyPath: 'username' });
+                }
+            }
+        });
+        return db.getAll('users');
+    };
+
+    const addUserToDB = async (user) => {
+        const db = await openDB('userDB', 1, {
+            upgrade(db) {
+                if (!db.objectStoreNames.contains('users')) {
+                    db.createObjectStore('users', { keyPath: 'username' });
+                }
+            }
+        });
+        await db.add('users', user);
+    };
+
+    const validateForm = async () => {
+
+        const savedUsers = await getAllUsers();
+        const userExists = savedUsers.some(user => user.username === username);
 
         if (!usernameRegex.test(username)) {
             setError("Invalid Username");
@@ -52,12 +76,11 @@ const SignUp = () => {
     const handleSignUp = async (e) => {
         e.preventDefault();
 
-        if (validateForm()) {
+        if (await validateForm()) {
             const hashedPassword = await bcrypt.hash(password, 10);
             const newUser = { username, email, password: hashedPassword };
-            savedUsers.push(newUser);
-            localStorage.setItem('users', JSON.stringify(savedUsers));
-            navigate('/login');
+            await addUserToDB(newUser);
+            navigate('/');
         }
     };
 
@@ -88,7 +111,7 @@ const SignUp = () => {
                     <button type="submit">Sign Up</button>
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                 </form>
-                <p>Already have an account? <Link to={'/login'}>Log In</Link></p>
+                <p>Already have an account? <Link to={'/'}>Log In</Link></p>
             </div>
             <div className="rules">
                 <h2>Rules</h2>
