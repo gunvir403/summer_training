@@ -1,0 +1,15 @@
+.theme-button {
+margin: auto;
+position: absolute;
+bottom: 0;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #333;
+  color: white;
+}

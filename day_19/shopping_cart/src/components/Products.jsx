@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router';
+import { Context } from './Context';
 
-const Products = ({ addToCart, cartLength }) => {
+const Products = () => {
+    
+    const { handleAddToCart, cart } = useContext(Context);
     const [loading, setLoading] = useState(true);
     const productUrl = 'https://dummyjson.com/products';
     const [error, setError] = useState('');
     const [productJSON, setProductJSON] = useState([]);
-
 
     useEffect( () => {
         const fetchProducts = async () => {
@@ -33,7 +35,7 @@ const Products = ({ addToCart, cartLength }) => {
             <h2>Shopping Page</h2>
             <div className="shopping-cart">
                 <Link to='cart'><FontAwesomeIcon icon={faCartShopping} /></Link>
-                <div className="badge"><p>{cartLength}</p></div>
+                <div className="badge"><p>{cart.length}</p></div>
             </div>
         </div>
         <div><h3>New Products</h3></div>
@@ -45,9 +47,9 @@ const Products = ({ addToCart, cartLength }) => {
                 <div key={item.id} className="product-items">
                     <img src={item.thumbnail} alt={item.title} />
                     <h3>{item.title}</h3>
-                    <h4>Price: ${item.price}</h4>
+                    <h4>Price: ${Math.round(item.price)}</h4>
                     <p>Rating: {item.rating}</p>
-                    <button onClick={() => addToCart(item)}>Add to Cart</button>
+                    <button onClick={() => handleAddToCart(item)}>Add to Cart</button>
                 </div>
             ))
             )}
