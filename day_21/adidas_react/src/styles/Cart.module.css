@@ -1,0 +1,20 @@
+.cart {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 80vw;
+    margin: 32px auto auto auto;
+    gap: 8px;
+}
+
+.cartItem {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;  
+    padding: 4px;
+    border: 1px solid black;
+}
+
+.cartItem img {
+    height: 100px;
+    width: 100px;
+}

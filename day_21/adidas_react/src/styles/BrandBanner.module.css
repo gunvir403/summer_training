@@ -1,0 +1,69 @@
+.brandBanner {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+    margin: 40px 0 0 0;
+}
+
+.brandBanner h1, .brandBanner h2 {
+    width: 80vw;
+}
+
+.brandBanner > img {
+    position: absolute;
+    top: 45%;
+    z-index: -1;
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.navPill {
+    display: flex;
+    gap: 4px;
+    width: 80vw;
+}
+
+.hoverFlex {
+    display: flex;
+    gap: 4px;
+    width: 80vw;
+    overflow: hidden;
+}
+
+.hoverBanner {
+    cursor: pointer;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 170px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.hoverBanner:hover {
+    transform: translateY(-15px);
+}
+
+.hoverBanner img {
+    object-fit: contain;
+}
+
+.hoverBanner > div {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+}
+
+.hoverBanner a {
+    margin: 0 0 0 8px;
+    text-decoration: underline;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.hoverBanner a:hover {
+    background-color: black;
+    color: white;
+}

@@ -1,0 +1,43 @@
+.sliderCards {
+    width: 80vw;
+    margin: auto auto 32px auto;
+}
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 14px;
+    scrollbar-width: none;
+}
+
+.card {
+    height: 600px;
+    width: 400px;
+}
+
+.card img {
+    height: 500px;
+    width: 400px;
+}
+
+.arrowLeft, .arrowRight {
+    position: absolute;
+    font-size: 32px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.arrowLeft {
+    left: 8px;
+}
+
+.arrowRight {
+    right: 8px;
+}

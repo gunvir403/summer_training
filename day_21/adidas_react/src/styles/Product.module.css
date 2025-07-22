@@ -1,0 +1,35 @@
+.product {
+    display: flex;
+    justify-content: space-around;
+    margin: 16px 0 0 0;
+}
+
+.imgFlex {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+    width: 616px;
+}
+
+.imgFlex img {
+    height: 280px;
+    width: 280px;
+}
+
+.infoFlex {
+    flex: 0 0 30%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.infoFlex button {
+    width: 80%;
+    height: 10%;
+    background-color: black;
+    color: white;
+}
+
+.infoFlex button:hover {
+    background-color: #222;
+    cursor: pointer;
+}
